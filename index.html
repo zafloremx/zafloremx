@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZAFLORÉ, diseño floral personalizado en Santa Fe, Cuajimalpa y zonas cercanas.">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+  <title>ZAFLORÉ | Diseño floral de autor</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260714-2">
+</head>
+<body>
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <img src="images/logoza.png" alt="Logotipo ZAFLORÉ" class="loader-logo loader-logoza" width="220" height="220">
+  </div>
+
+  <header class="header" id="header">
+    <div class="container nav">
+      <a class="brand-logo-link" href="#inicio" aria-label="Regresar al inicio de ZAFLORÉ">
+        <img class="brand-logo brand-logo-horizontal" src="images/logoweb-banner.png" alt="ZAFLORÉ by Benhumea" width="420" height="140">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu" id="menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#ocasiones">Ocasiones</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#cotizador">Cotizador</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#referencias">Referencias</a>
+        <a href="#contacto">Contacto</a>
+        <a href="politicas.html">Políticas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="container hero-content reveal">
+<p class="eyebrow">Diseño floral de autor</p>
+        <h1 class="gold-text">Flores que hablan por ti</h1>
+        <p class="hero-copy">Creamos composiciones elegantes y personalizadas para momentos que merecen permanecer.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#cotizador">Diseñar mi arreglo</a>
+          <a class="btn btn-ghost" href="#catalogo">Explorar catálogo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="luxury-strip" aria-label="Características de ZAFLORÉ">
+      <div class="container strip-grid">
+        <div><strong>Diseño personalizado</strong><span>Cada pieza se adapta a tu ocasión.</span></div>
+        <div><strong>Selección floral</strong><span>Frescura, armonía y presencia.</span></div>
+        <div><strong>Atención cercana</strong><span>De la idea a la entrega.</span></div>
+      </div>
+    </section>
+
+    <section class="section light-section" id="ocasiones">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow dark">Momentos inolvidables</p>
+          <h2>Una creación para cada ocasión</h2>
+        </div>
+
+        <div class="occasion-grid">
+          <button class="occasion-card occasion-birthday reveal catalog-shortcut" type="button" data-occasion="cumpleanos">
+            <span class="number">01</span>
+            <h3>Cumpleaños</h3>
+            <p>Color y personalidad.</p>
+          </button>
+
+          <button class="occasion-card occasion-love reveal catalog-shortcut" type="button" data-occasion="aniversario">
+            <span class="number">02</span>
+            <h3>Amor</h3>
+            <p>Diseños con intención.</p>
+          </button>
+
+          <button class="occasion-card occasion-graduation reveal catalog-shortcut" type="button" data-occasion="graduacion">
+            <span class="number">03</span>
+            <h3>Graduaciones</h3>
+            <p>Celebrar grandes logros.</p>
+          </button>
+
+          <button class="occasion-card occasion-events reveal catalog-shortcut" type="button" data-occasion="evento">
+            <span class="number">04</span>
+            <h3>Eventos</h3>
+            <p>Piezas para espacios especiales.</p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="catalogo">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Colección ZAFLORÉ</p>
+          <h2 class="gold-text">Catálogo dinámico</h2>
+          <p class="light-copy">Filtra por ocasión, estilo o presupuesto. Los precios son referencias y pueden variar por temporada.</p>
+        </div>
+
+        <div class="catalog-controls reveal">
+          <select id="filterOccasion" aria-label="Filtrar por ocasión">
+            <option value="">Todas las ocasiones</option>
+            <option value="cumpleanos">Cumpleaños</option>
+            <option value="aniversario">Aniversario</option>
+            <option value="graduacion">Graduación</option>
+            <option value="evento">Evento</option>
+            <option value="condolencias">Condolencias</option>
+          </select>
+
+          <select id="filterCategory" aria-label="Filtrar por categoría">
+            <option value="">Todos los estilos</option>
+            <option value="premium">Premium</option>
+            <option value="amor">Amor</option>
+            <option value="graduacion">Graduación</option>
+            <option value="cumpleanos">Cumpleaños</option>
+            <option value="condolencias">Condolencias</option>
+          </select>
+
+          <select id="filterPrice" aria-label="Filtrar por precio">
+            <option value="">Cualquier presupuesto</option>
+            <option value="1000">Hasta $1,000</option>
+            <option value="1500">Hasta $1,500</option>
+            <option value="2500">Hasta $2,500</option>
+            <option value="99999">Más opciones</option>
+          </select>
+
+          <button class="btn btn-ghost compact" id="clearFilters" type="button">Limpiar</button>
+        </div>
+
+        <p class="catalog-status" id="catalogStatus" role="status" aria-live="polite">
+          Cargando catálogo…
+        </p>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        <p id="emptyCatalog" class="empty-state" hidden>No encontramos arreglos con esos filtros. Podemos crear uno personalizado.</p>
+      </div>
+    </section>
+
+    <section class="section light-section" id="cotizador">
+      <div class="container quote-grid">
+        <div class="quote-intro reveal">
+          <p class="eyebrow dark">Cotizador inteligente</p>
+          <h2>Construye una solicitud en minutos</h2>
+          <p>El cotizador genera una recomendación y prepara el mensaje para WhatsApp.</p>
+
+          <div class="assistant-box">
+            <strong>Asistente ZAFLORÉ</strong>
+            <p id="assistantText">Selecciona una ocasión y presupuesto para recibir una sugerencia.</p>
+          </div>
+        </div>
+
+        <form class="quote-form reveal" id="quoteForm" autocomplete="on">
+          <label>Ocasión
+            <select id="quoteOccasion" required>
+              <option value="">Selecciona</option>
+              <option value="cumpleanos">Cumpleaños</option>
+              <option value="aniversario">Aniversario</option>
+              <option value="graduacion">Graduación</option>
+              <option value="evento">Evento</option>
+              <option value="condolencias">Condolencias</option>
+            </select>
+          </label>
+
+          <label>Presupuesto
+            <select id="quoteBudget" required>
+              <option value="">Selecciona</option>
+              <option value="1000">Hasta $1,000</option>
+              <option value="1500">De $1,000 a $1,500</option>
+              <option value="2500">De $1,500 a $2,500</option>
+              <option value="4000">Más de $2,500</option>
+            </select>
+          </label>
+
+          <label>Paleta de color
+            <select id="quoteColor">
+              <option value="libre">A elección de ZAFLORÉ</option>
+              <option value="rosa y blanco">Rosa y blanco</option>
+              <option value="blanco y verde">Blanco y verde</option>
+              <option value="tonos intensos">Tonos intensos</option>
+              <option value="neutros y elegantes">Neutros y elegantes</option>
+            </select>
+          </label>
+
+          <label>Fecha de entrega
+            <input id="quoteDate" type="date">
+          </label>
+
+          <label>Zona de entrega
+            <input id="quoteZone" type="text" maxlength="80" autocomplete="address-level2" placeholder="Ej. Santa Fe">
+          </label>
+
+          <label>Mensaje o indicaciones
+            <textarea id="quoteNotes" rows="4" maxlength="600"></textarea>
+          </label>
+
+          <button class="btn btn-gold full" type="submit">Enviar solicitud por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="signature-section">
+      <div class="signature-media" aria-hidden="true"></div>
+      <div class="signature-overlay" aria-hidden="true"></div>
+
+      <div class="container signature-content reveal">
+        <p class="eyebrow">Recomendación personalizada</p>
+        <h2 class="gold-text">Una pieza única comienza con una conversación</h2>
+        <p>También podemos crear una propuesta sin partir de un modelo del catálogo.</p>
+        <button class="btn btn-gold whatsapp-link" type="button" data-message="Hola, quiero una propuesta floral totalmente personalizada con ZAFLORÉ.">Hablar con ZAFLORÉ</button>
+      </div>
+    </section>
+
+    <section class="section light-section" id="nosotros">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow dark">Nuestra esencia</p>
+          <h2>Detalles creados con intención</h2>
+          <p>ZAFLORÉ transforma flores en mensajes mediante selección, textura, equilibrio y sensibilidad.</p>
+          <div class="about-values"><span>Elegancia</span><span>Personalización</span><span>Detalle</span></div>
+        </div>
+
+        <div class="about-visual reveal">
+          <div class="frame"></div>
+          <div class="about-photo" role="img" aria-label="Equipo y proceso creativo de ZAFLORÉ"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section references-section" id="referencias">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Referencias y recomendaciones</p>
+          <h2 class="gold-text">Experiencias, inspiración y comunidad</h2>
+          <p class="light-copy">
+            Consulta ejemplos publicados por ZAFLORÉ en Facebook y comparte tu propia experiencia.
+            Las recomendaciones enviadas se revisan antes de publicarse.
+          </p>
+        </div>
+
+        <div class="references-layout">
+          <div class="facebook-references reveal">
+            <div class="references-subhead">
+              <p class="eyebrow">Ejemplos públicos</p>
+              <h3>Referencias tomadas de Facebook</h3>
+              <p>
+                Estas tarjetas resumen temas presentes en publicaciones públicas de ZAFLORÉ.
+                No se presentan como reseñas de clientes.
+              </p>
+            </div>
+
+            <div class="facebook-reference-grid">
+              <article class="facebook-reference-card reference-graduation">
+                <div class="reference-card-overlay"></div>
+                <div class="reference-card-content">
+                  <span>Graduaciones</span>
+                  <h4>Detalles para celebrar años de esfuerzo</h4>
+                  <p>
+                    Bouquets y arreglos personalizados pensados para reconocer logros importantes.
+                  </p>
+                  <a href="https://www.facebook.com/zafloremx/posts/-detr%C3%A1s-de-cada-graduaci%C3%B3n-hay-a%C3%B1os-de-esfuerzo-desvelos-y-sue%C3%B1os-cumplidoshaz-q/122112978381306634/"
+                     target="_blank" rel="noopener noreferrer">
+                    Ver publicación
+                  </a>
+                </div>
+              </article>
+
+              <article class="facebook-reference-card reference-meaning">
+                <div class="reference-card-overlay"></div>
+                <div class="reference-card-content">
+                  <span>Diseño con significado</span>
+                  <h4>Color, intención y personalidad</h4>
+                  <p>
+                    Composiciones donde cada flor y cada tono ayudan a transmitir un mensaje.
+                  </p>
+                  <a href="https://www.facebook.com/zafloremx/posts/un-detalle-que-habla-por-s%C3%AD-solodise%C3%B1o-color-y-significado-en-cada-flor-pensado-/122109821397306634/"
+                     target="_blank" rel="noopener noreferrer">
+                    Ver publicación
+                  </a>
+                </div>
+              </article>
+
+              <article class="facebook-reference-card reference-family">
+                <div class="reference-card-overlay"></div>
+                <div class="reference-card-content">
+                  <span>Celebraciones familiares</span>
+                  <h4>Diseños especiales para papá</h4>
+                  <p>
+                    Ejemplos de arreglos con girasoles, rosas y lirios para fechas especiales.
+                  </p>
+                  <a href="https://www.facebook.com/zafloremx/photos/un-dise%C3%B1o-que-celebra-a-pap%C3%A1-con-elegancia-girasoles-rosas-y-lirios-en-un-dise%C3%B1o/122110950345306634/"
+                     target="_blank" rel="noopener noreferrer">
+                    Ver publicación
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="recommendation-panel reveal">
+            <div class="references-subhead">
+              <p class="eyebrow">Tu experiencia</p>
+              <h3>Comparte una recomendación</h3>
+              <p>
+                El comentario se enviará por WhatsApp para revisión. En este sitio estático,
+                el borrador solo se conserva en tu navegador hasta que ZAFLORÉ lo apruebe.
+              </p>
+            </div>
+
+            <form class="recommendation-form" id="recommendationForm" autocomplete="on">
+              <label for="recommendationName">Nombre o iniciales</label>
+              <input id="recommendationName" name="recommendationName"
+                     type="text" maxlength="60" autocomplete="name" required>
+
+              <label for="recommendationRating">Calificación</label>
+              <select id="recommendationRating" name="recommendationRating" required>
+                <option value="">Selecciona</option>
+                <option value="5">5 estrellas</option>
+                <option value="4">4 estrellas</option>
+                <option value="3">3 estrellas</option>
+                <option value="2">2 estrellas</option>
+                <option value="1">1 estrella</option>
+              </select>
+
+              <label for="recommendationOccasion">Tipo de experiencia</label>
+              <select id="recommendationOccasion" name="recommendationOccasion">
+                <option value="Pedido floral">Pedido floral</option>
+                <option value="Entrega">Entrega</option>
+                <option value="Atención y cotización">Atención y cotización</option>
+                <option value="Diseño personalizado">Diseño personalizado</option>
+                <option value="Otro">Otro</option>
+              </select>
+
+              <label for="recommendationMessage">Recomendación o retroalimentación</label>
+              <textarea id="recommendationMessage" name="recommendationMessage"
+                        rows="5" minlength="20" maxlength="500" required
+                        placeholder="Cuéntanos qué te gustó y qué podríamos mejorar."></textarea>
+
+              <label class="recommendation-consent">
+                <input id="recommendationConsent" type="checkbox" required>
+                <span>Autorizo que ZAFLORÉ revise este comentario y me contacte para confirmar su publicación.</span>
+              </label>
+
+              <button class="btn btn-gold full" type="submit">
+                Enviar recomendación por WhatsApp
+              </button>
+            </form>
+
+            <div class="pending-recommendations">
+              <div class="pending-header">
+                <h4>Mis recomendaciones pendientes</h4>
+                <button class="text-button" id="clearPendingRecommendations" type="button">
+                  Limpiar borradores
+                </button>
+              </div>
+              <p class="pending-help" id="pendingRecommendationsHelp">
+                Los borradores enviados desde este dispositivo aparecerán aquí.
+              </p>
+              <div id="pendingRecommendationsList" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section instagram-section">
+      <div class="container instagram-grid">
+        <div class="reveal">
+          <p class="eyebrow">Comunidad ZAFLORÉ</p>
+          <h2 class="gold-text">Conecta con nosotros</h2>
+          <p class="light-copy">Descubre diseños recientes, novedades y formas de contacto en nuestras redes sociales.</p>
+
+          <div class="social-buttons" aria-label="Redes sociales de ZAFLORÉ">
+            <a class="social-button" href="https://www.instagram.com/zafloremx/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de ZAFLORÉ">
+              <span class="social-mark" aria-hidden="true">IG</span>
+              <span>Instagram</span>
+            </a>
+
+            <a class="social-button" href="https://www.facebook.com/zafloremx/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Facebook de ZAFLORÉ">
+              <span class="social-mark" aria-hidden="true">f</span>
+              <span>Facebook</span>
+            </a>
+
+            <a class="social-button" href="https://www.tiktok.com/@zafloremx" target="_blank" rel="noopener noreferrer" aria-label="Abrir TikTok de ZAFLORÉ">
+              <span class="social-mark" aria-hidden="true">♪</span>
+              <span>TikTok</span>
+            </a>
+
+            <a class="social-button" href="mailto:zafloremx@gmail.com" aria-label="Enviar correo a ZAFLORÉ">
+              <span class="social-mark" aria-hidden="true">@</span>
+              <span>Correo</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="instagram-preview reveal">
+          <a href="https://www.instagram.com/zafloremx/" target="_blank" rel="noopener noreferrer">
+            <img src="images/arreglo-1.jpg" alt="Diseño floral ZAFLORÉ" loading="lazy">
+          </a>
+          <a href="https://www.instagram.com/zafloremx/" target="_blank" rel="noopener noreferrer">
+            <img src="images/arreglo-2.jpg" alt="Arreglo floral ZAFLORÉ" loading="lazy">
+          </a>
+          <a href="https://www.instagram.com/zafloremx/" target="_blank" rel="noopener noreferrer">
+            <img src="images/arreglo-3.jpg" alt="Bouquet ZAFLORÉ" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 class="gold-text">Hablemos de tu próxima creación</h2>
+          <p>Atención en Santa Fe, Cuajimalpa y zonas cercanas, sujeto a confirmación.</p>
+
+          <div class="contact-links">
+            <button class="text-button whatsapp-link" type="button" data-message="Hola, quiero información de ZAFLORÉ.">WhatsApp · 720 443 3198</button>
+            <a href="mailto:zafloremx@gmail.com">zafloremx@gmail.com</a>
+            <a href="politicas.html">Consultar políticas</a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" autocomplete="on">
+          <div class="field">
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" maxlength="80" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="occasion">Ocasión</label>
+            <select id="occasion" name="occasion">
+              <option>Cumpleaños</option>
+              <option>Aniversario</option>
+              <option>Graduación</option>
+              <option>Evento</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="budget">Presupuesto aproximado</label>
+            <input id="budget" name="budget" type="text" maxlength="40" inputmode="decimal" placeholder="Ej. $1,500 MXN">
+          </div>
+
+          <div class="field">
+            <label for="message">Cuéntanos tu idea</label>
+            <textarea id="message" name="message" rows="5" maxlength="600"></textarea>
+          </div>
+
+          <button class="btn btn-gold full" type="submit">Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <aside class="floating-social-stack" aria-label="Accesos rápidos a redes sociales">
+    <button class="floating-social floating-whatsapp whatsapp-link" type="button"
+      data-message="Hola, quiero información de ZAFLORÉ."
+      aria-label="Contactar por WhatsApp"><span aria-hidden="true">WA</span></button>
+
+    <a class="floating-social floating-instagram" href="https://www.instagram.com/zafloremx/"
+      target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de ZAFLORÉ">
+      <span aria-hidden="true">IG</span>
+    </a>
+
+    <a class="floating-social floating-facebook" href="https://www.facebook.com/zafloremx/"
+      target="_blank" rel="noopener noreferrer" aria-label="Abrir Facebook de ZAFLORÉ">
+      <span aria-hidden="true">f</span>
+    </a>
+
+    <a class="floating-social floating-tiktok" href="https://www.tiktok.com/@zafloremx"
+      target="_blank" rel="noopener noreferrer" aria-label="Abrir TikTok de ZAFLORÉ">
+      <span aria-hidden="true">♪</span>
+    </a>
+
+    <a class="floating-social floating-email" href="mailto:zafloremx@gmail.com"
+      aria-label="Enviar correo a ZAFLORÉ">
+      <span aria-hidden="true">@</span>
+    </a>
+  </aside>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <a class="footer-logo-link" href="#inicio" aria-label="Regresar al inicio de ZAFLORÉ">
+        <img class="footer-logo" src="images/logo.jpg" alt="ZAFLORÉ by Benhumea" width="150" height="150">
+      </a>
+
+      <div class="footer-center">
+        <p>Diseño floral de autor.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/zafloremx/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/zafloremx/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.tiktok.com/@zafloremx" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="mailto:zafloremx@gmail.com">Correo</a>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        © <span id="year"></span> ZAFLORÉ · <a href="politicas.html">Políticas</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=20260714-2"></script>
+</body>
+</html>

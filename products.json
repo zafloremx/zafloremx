@@ -1,0 +1,103 @@
+[
+  {
+    "id": "elegancia-rosa",
+    "name": "Elegancia Rosa",
+    "category": "amor",
+    "occasion": [
+      "aniversario",
+      "cumpleanos"
+    ],
+    "colors": [
+      "rosa",
+      "blanco"
+    ],
+    "price": 1450,
+    "featured": true,
+    "image": "images/arreglo-1.jpg",
+    "description": "Ramo de autor en tonos rosa y blanco, con follaje fino y acabado elegante."
+  },
+  {
+    "id": "signature-gold",
+    "name": "Signature Gold",
+    "category": "premium",
+    "occasion": [
+      "aniversario",
+      "evento"
+    ],
+    "colors": [
+      "blanco",
+      "dorado"
+    ],
+    "price": 2200,
+    "featured": true,
+    "image": "images/arreglo-2.jpg",
+    "description": "Diseño premium en caja con composición equilibrada y detalles de presentación."
+  },
+  {
+    "id": "bouquet-celebracion",
+    "name": "Bouquet Celebración",
+    "category": "graduacion",
+    "occasion": [
+      "graduacion",
+      "cumpleanos"
+    ],
+    "colors": [
+      "rosa",
+      "morado"
+    ],
+    "price": 1250,
+    "featured": true,
+    "image": "images/arreglo-3.jpg",
+    "description": "Bouquet diseñado para graduaciones, cumpleaños y celebraciones especiales."
+  },
+  {
+    "id": "edicion-privada",
+    "name": "Edición Privada",
+    "category": "premium",
+    "occasion": [
+      "evento",
+      "aniversario"
+    ],
+    "colors": [
+      "blanco",
+      "verde"
+    ],
+    "price": 3200,
+    "featured": true,
+    "image": "images/arreglo-4.jpg",
+    "description": "Composición floral de gran formato creada según la ocasión y el espacio."
+  },
+  {
+    "id": "detalle-clasico",
+    "name": "Detalle Clásico",
+    "category": "cumpleanos",
+    "occasion": [
+      "cumpleanos",
+      "agradecimiento"
+    ],
+    "colors": [
+      "blanco",
+      "rosa"
+    ],
+    "price": 950,
+    "featured": false,
+    "image": "images/arreglo-1.jpg",
+    "description": "Una opción versátil y refinada para agradecer o celebrar."
+  },
+  {
+    "id": "serenidad",
+    "name": "Serenidad",
+    "category": "condolencias",
+    "occasion": [
+      "condolencias"
+    ],
+    "colors": [
+      "blanco",
+      "verde"
+    ],
+    "price": 1800,
+    "featured": false,
+    "image": "images/arreglo-4.jpg",
+    "description": "Diseño sobrio y respetuoso en tonos claros y follaje natural."
+  }
+]

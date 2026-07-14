@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+  <title>Administrador local | ZAFLORÉ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-page">
+  <header class="header scrolled">
+    <div class="container nav">
+      <a class="brand-logo-link" href="index.html#inicio" aria-label="Regresar al inicio de ZAFLORÉ">
+        <img class="brand-logo brand-logo-horizontal" src="images/logoweb-banner.png" alt="ZAFLORÉ by Benhumea" width="178" height="72">
+      </a>
+      <nav class="policy-nav"><a href="index.html">Ver sitio</a></nav>
+    </div>
+  </header>
+
+  <main class="admin-main container">
+    <section class="admin-intro">
+      <p class="eyebrow">Panel local</p>
+      <h1 class="gold-text">Administrador de catálogo</h1>
+      <p>Los cambios se guardan únicamente en este navegador. Para publicarlos en GitHub, exporta el archivo y reemplaza <code>products.json</code> en el repositorio.</p>
+      <p class="security-warning"><strong>Importante:</strong> GitHub Pages es público y este módulo no constituye autenticación. No almacenes contraseñas, datos bancarios ni información personal de clientes.</p>
+    </section>
+
+    <section class="admin-layout">
+      <form id="adminForm" class="admin-form" autocomplete="off">
+        <input type="hidden" id="adminId">
+
+        <label>Nombre
+          <input id="adminName" type="text" maxlength="80" required>
+        </label>
+
+        <label>Categoría
+          <select id="adminCategory">
+            <option value="premium">Premium</option>
+            <option value="amor">Amor</option>
+            <option value="graduacion">Graduación</option>
+            <option value="cumpleanos">Cumpleaños</option>
+            <option value="condolencias">Condolencias</option>
+          </select>
+        </label>
+
+        <label>Ocasiones, separadas por coma
+          <input id="adminOccasion" type="text" maxlength="180" placeholder="cumpleanos, aniversario">
+        </label>
+
+        <label>Colores, separados por coma
+          <input id="adminColors" type="text" maxlength="180">
+        </label>
+
+        <label>Precio
+          <input id="adminPrice" type="number" min="0" max="100000" step="1" required>
+        </label>
+
+        <label>Ruta de imagen
+          <input id="adminImage" type="text" maxlength="120" value="images/arreglo-1.jpg" pattern="images/[A-Za-z0-9._-]+\.(jpg|jpeg|png|webp)" required>
+        </label>
+
+        <label>Descripción
+          <textarea id="adminDescription" rows="4" maxlength="320"></textarea>
+        </label>
+
+        <label class="check-row">
+          <input id="adminFeatured" type="checkbox"> Destacado
+        </label>
+
+        <div class="admin-actions">
+          <button class="btn btn-gold" type="submit">Guardar producto</button>
+          <button class="btn btn-ghost" type="button" id="resetAdmin">Nuevo</button>
+        </div>
+
+        <p class="admin-status" id="adminStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div>
+        <div class="admin-tools">
+          <button class="btn btn-gold compact" type="button" id="exportProducts">Exportar products.json</button>
+
+          <label class="btn btn-ghost compact file-button">
+            Importar JSON
+            <input id="importProducts" type="file" accept="application/json,.json">
+          </label>
+
+          <button class="btn btn-ghost compact" type="button" id="restoreProducts">Restaurar original</button>
+        </div>
+
+        <div id="adminList" class="admin-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

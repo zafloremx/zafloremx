@@ -1,0 +1,15 @@
+portada.jpg
+arreglo-1.jpg
+arreglo-2.jpg
+arreglo-3.jpg
+arreglo-4.jpg
+personalizado.jpg
+nosotros.jpg
+logo.jpg
+logoza.png
+logoweb-banner.png
+
+Uso en sección Referencias:
+- arreglo-3.jpg: referencia de graduaciones
+- arreglo-1.jpg: referencia de diseño con significado
+- arreglo-4.jpg: referencia de celebraciones familiares
