@@ -3,6 +3,7 @@ arreglo-1.jpg
 arreglo-2.jpg
 arreglo-3.jpg
 arreglo-4.jpg
+arreglo-5.png
 personalizado.jpg
 nosotros.jpg
 logo.jpg
