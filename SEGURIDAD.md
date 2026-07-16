@@ -28,3 +28,22 @@ Para un endurecimiento superior se recomienda publicar detrás de Cloudflare Pag
 - Protección real del módulo administrador mediante autenticación y backend.
 
 El archivo `admin.html` continúa siendo públicamente accesible si alguien conoce su dirección. No se debe guardar información sensible en ese módulo.
+
+
+## Acceso a carpetas locales
+
+La función de escritura de imágenes utiliza la File System Access API del navegador.
+
+- Requiere una acción explícita del usuario.
+- El navegador muestra un selector y solicita permisos.
+- El sitio no puede explorar otras carpetas sin autorización.
+- Los permisos pueden revocarse cerrando la pestaña o desde la configuración del navegador.
+- No se escriben archivos directamente en GitHub; únicamente en la carpeta local seleccionada.
+
+## Archivos Excel
+
+- Tamaño máximo: 5 MB.
+- Solo se procesa la primera hoja.
+- Los valores se tratan como datos, no como código.
+- Las rutas de imagen se restringen a nombres JPG, JPEG, PNG o WEBP.
+- Las filas inválidas no se incorporan al catálogo.

@@ -150,3 +150,73 @@ El orden de carga ahora es:
 Esto permite visualizar productos incluso al abrir `index.html` directamente desde una carpeta. Para una prueba completa del administrador se sigue recomendando GitHub Pages o un servidor local.
 
 También se agregaron versiones a `style.css` y `script.js` para reducir problemas de caché del navegador.
+
+
+## Administrador mejorado: imágenes y Excel
+
+### Adjuntar imagen
+
+El formulario del administrador ahora permite:
+
+1. Seleccionar la carpeta local del proyecto.
+2. Adjuntar una imagen JPG, PNG o WEBP.
+3. Ver una vista previa.
+4. Guardar la imagen dentro de la subcarpeta `images` de la copia local seleccionada.
+5. Registrar automáticamente la ruta `images/nombre-de-imagen.ext`.
+
+Por seguridad, el navegador siempre solicita autorización para abrir y modificar una carpeta local.
+
+### Limitación de GitHub Pages
+
+GitHub Pages es un alojamiento estático y no permite que JavaScript modifique directamente los archivos del repositorio remoto.
+
+El administrador escribe en la copia local autorizada. Después se deben subir a GitHub:
+
+- la imagen nueva dentro de `images`;
+- el archivo `products.json` exportado.
+
+### Plantilla Excel
+
+La página `admin.html` incluye un enlace directo a:
+
+`plantilla_catalogo_zaflore.xlsx`
+
+La plantilla contiene las columnas:
+
+- id
+- nombre
+- categoria
+- ocasiones
+- colores
+- precio
+- destacado
+- imagen
+- descripcion
+- estado_imagen
+- retroalimentacion
+
+En la columna `imagen` debe escribirse solamente el nombre del archivo, por ejemplo:
+
+`arreglo-5.jpg`
+
+### Validación del Excel
+
+Al cargar el Excel:
+
+- se revisan los datos de cada producto;
+- se valida que el nombre de la imagen sea seguro;
+- se busca la imagen dentro de la carpeta `images` seleccionada;
+- si no se seleccionó carpeta, se intenta validar contra la versión publicada;
+- solo se importan filas válidas con imagen localizada;
+- se genera un enlace temporal para descargar un Excel con:
+  - estado de la imagen;
+  - errores encontrados;
+  - retroalimentación por fila.
+
+### Archivos agregados
+
+- `plantilla_catalogo_zaflore.xlsx`
+- `jszip.min.js`
+- `xlsx-catalog.js`
+
+`jszip.min.js` se incluye localmente para evitar dependencias externas durante la lectura y creación de archivos Excel.

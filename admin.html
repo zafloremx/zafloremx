@@ -28,7 +28,8 @@
     <section class="admin-intro">
       <p class="eyebrow">Panel local</p>
       <h1 class="gold-text">Administrador de catálogo</h1>
-      <p>Los cambios se guardan únicamente en este navegador. Para publicarlos en GitHub, exporta el archivo y reemplaza <code>products.json</code> en el repositorio.</p>
+      <p>Los productos se guardan en este navegador. Para trabajar con imágenes, selecciona una copia local de la carpeta del proyecto; el navegador pedirá autorización antes de leer o escribir en <code>images</code>.</p>
+      <p class="security-warning"><strong>GitHub Pages no puede modificar el repositorio remoto directamente.</strong> Después de guardar imágenes o exportar <code>products.json</code>, sube los archivos actualizados a GitHub.</p>
       <p class="security-warning"><strong>Importante:</strong> GitHub Pages es público y este módulo no constituye autenticación. No almacenes contraseñas, datos bancarios ni información personal de clientes.</p>
     </section>
 
@@ -62,6 +63,15 @@
           <input id="adminPrice" type="number" min="0" max="100000" step="1" required>
         </label>
 
+        <label>Imagen del producto
+          <input id="adminImageFile" type="file" accept="image/jpeg,image/png,image/webp">
+        </label>
+
+        <div class="admin-image-preview-wrap">
+          <img id="adminImagePreview" class="admin-image-preview" src="images/arreglo-1.jpg" alt="Vista previa de la imagen seleccionada">
+          <p id="adminImageHelp">Selecciona una imagen o escribe una ruta existente.</p>
+        </div>
+
         <label>Ruta de imagen
           <input id="adminImage" type="text" maxlength="120" value="images/arreglo-1.jpg" pattern="images/[A-Za-z0-9._-]+\.(jpg|jpeg|png|webp)" required>
         </label>
@@ -84,6 +94,9 @@
 
       <div>
         <div class="admin-tools">
+          <button class="btn btn-gold compact" type="button" id="selectProjectFolder">Seleccionar carpeta del proyecto</button>
+          <span class="folder-status" id="folderStatus">Carpeta no seleccionada</span>
+
           <button class="btn btn-gold compact" type="button" id="exportProducts">Exportar products.json</button>
 
           <label class="btn btn-ghost compact file-button">
@@ -91,14 +104,31 @@
             <input id="importProducts" type="file" accept="application/json,.json">
           </label>
 
+          <a class="btn btn-ghost compact" href="plantilla_catalogo_zaflore.xlsx" download>
+            Descargar plantilla Excel
+          </a>
+
+          <label class="btn btn-ghost compact file-button">
+            Cargar catálogo Excel
+            <input id="importCatalogExcel" type="file" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+          </label>
+
+          <a class="btn btn-gold compact temporary-download" id="downloadFeedbackExcel" href="#" download="retroalimentacion_catalogo_zaflore.xlsx" hidden>
+            Descargar Excel con retroalimentación
+          </a>
+
           <button class="btn btn-ghost compact" type="button" id="restoreProducts">Restaurar original</button>
         </div>
+
+        <div class="excel-feedback" id="excelFeedback" aria-live="polite"></div>
 
         <div id="adminList" class="admin-list"></div>
       </div>
     </section>
   </main>
 
+  <script src="jszip.min.js"></script>
+  <script src="xlsx-catalog.js"></script>
   <script src="admin.js"></script>
 </body>
 </html>

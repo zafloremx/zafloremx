@@ -11,9 +11,9 @@
       "rosa",
       "blanco"
     ],
-    "price": "Cotizar",
+    "price": 1450,
     "featured": true,
-    "image": "images/arreglo-4.jpg",
+    "image": "images/arreglo-1.jpg",
     "description": "Ramo de autor en tonos rosa y blanco, con follaje fino y acabado elegante."
   },
   {
@@ -28,7 +28,7 @@
       "blanco",
       "dorado"
     ],
-    "price": "Cotizar",
+    "price": 2200,
     "featured": true,
     "image": "images/arreglo-2.jpg",
     "description": "Diseño premium en caja con composición equilibrada y detalles de presentación."
@@ -62,9 +62,9 @@
       "blanco",
       "verde"
     ],
-    "price": "Cotizar",
+    "price": 3200,
     "featured": true,
-    "image": "images/arreglo-5.png",
+    "image": "images/arreglo-4.jpg",
     "description": "Composición floral de gran formato creada según la ocasión y el espacio."
   },
   {
@@ -79,7 +79,7 @@
       "blanco",
       "rosa"
     ],
-    "price": "cotizar",
+    "price": 950,
     "featured": false,
     "image": "images/arreglo-1.jpg",
     "description": "Una opción versátil y refinada para agradecer o celebrar."
@@ -95,7 +95,7 @@
       "blanco",
       "verde"
     ],
-    "price": "Cotizar",
+    "price": 1800,
     "featured": false,
     "image": "images/arreglo-4.jpg",
     "description": "Diseño sobrio y respetuoso en tonos claros y follaje natural."

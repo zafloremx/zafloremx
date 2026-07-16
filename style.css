@@ -1749,3 +1749,93 @@ textarea:user-invalid {
 .catalog-status.catalog-error {
   color: #e2a0a0;
 }
+
+
+/* ================================================================
+   Administrador: imágenes, carpeta local y carga de Excel
+   ================================================================ */
+
+.admin-image-preview-wrap {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid rgba(216, 184, 90, 0.24);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.admin-image-preview {
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
+  border: 1px solid rgba(216, 184, 90, 0.45);
+  background: #111;
+}
+
+.admin-image-preview-wrap p,
+.folder-status,
+.excel-feedback {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.82rem;
+}
+
+.folder-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 0.8rem;
+  border-left: 2px solid var(--gold);
+}
+
+.folder-status.error {
+  color: #f0aaaa;
+  border-left-color: #d16666;
+}
+
+.excel-feedback {
+  margin: 1rem 0 1.4rem;
+  padding: 1rem;
+  border: 1px solid rgba(216, 184, 90, 0.22);
+  background: rgba(216, 184, 90, 0.05);
+}
+
+.temporary-download[hidden] {
+  display: none;
+}
+
+.admin-item {
+  grid-template-columns: 64px 1fr auto;
+}
+
+.admin-item-thumbnail {
+  width: 58px;
+  height: 58px;
+  object-fit: cover;
+  border: 1px solid rgba(216, 184, 90, 0.35);
+}
+
+.admin-item small {
+  display: block;
+  margin-top: 0.25rem;
+  color: rgba(255, 255, 255, 0.46);
+}
+
+@media (max-width: 640px) {
+  .admin-image-preview-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-image-preview {
+    width: 100%;
+    height: 190px;
+  }
+
+  .admin-item {
+    grid-template-columns: 52px 1fr;
+  }
+
+  .admin-item > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
