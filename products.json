@@ -11,7 +11,7 @@
       "rosa",
       "blanco"
     ],
-    "price": 1450,
+    "price": 0,
     "featured": true,
     "image": "images/arreglo-1.jpg",
     "description": "Ramo de autor en tonos rosa y blanco, con follaje fino y acabado elegante."
@@ -28,7 +28,7 @@
       "blanco",
       "dorado"
     ],
-    "price": 2200,
+    "price":0,
     "featured": true,
     "image": "images/arreglo-2.jpg",
     "description": "Diseño premium en caja con composición equilibrada y detalles de presentación."
@@ -45,7 +45,7 @@
       "rosa",
       "morado"
     ],
-    "price": 1250,
+    "price": 0,
     "featured": true,
     "image": "images/arreglo-3.jpg",
     "description": "Bouquet diseñado para graduaciones, cumpleaños y celebraciones especiales."
@@ -62,7 +62,7 @@
       "blanco",
       "verde"
     ],
-    "price": 3200,
+    "price": 0,
     "featured": true,
     "image": "images/arreglo-4.jpg",
     "description": "Composición floral de gran formato creada según la ocasión y el espacio."
@@ -79,7 +79,7 @@
       "blanco",
       "rosa"
     ],
-    "price": 950,
+    "price": 0,
     "featured": false,
     "image": "images/arreglo-1.jpg",
     "description": "Una opción versátil y refinada para agradecer o celebrar."
@@ -95,7 +95,7 @@
       "blanco",
       "verde"
     ],
-    "price": 1800,
+    "price": 0,
     "featured": false,
     "image": "images/arreglo-4.jpg",
     "description": "Diseño sobrio y respetuoso en tonos claros y follaje natural."
