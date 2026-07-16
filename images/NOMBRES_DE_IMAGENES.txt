@@ -3,7 +3,6 @@ arreglo-1.jpg
 arreglo-2.jpg
 arreglo-3.jpg
 arreglo-4.jpg
-arreglo-5.png
 personalizado.jpg
 nosotros.jpg
 logo.jpg
@@ -14,3 +13,8 @@ Uso en sección Referencias:
 - arreglo-3.jpg: referencia de graduaciones
 - arreglo-1.jpg: referencia de diseño con significado
 - arreglo-4.jpg: referencia de celebraciones familiares
+
+Las imágenes nuevas del catálogo deben usar nombres seguros:
+- solo letras, números, punto, guion y guion bajo
+- extensiones permitidas: .jpg, .jpeg, .png, .webp
+- en Excel escribir únicamente el nombre, sin images/
